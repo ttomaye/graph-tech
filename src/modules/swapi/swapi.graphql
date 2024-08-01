@@ -1,16 +1,37 @@
-extend type Query{
-  swapiCharacterById(id: ID!): StarWarsCharacter!
-}
+# src/swapi/swapi.graphql
 
 type StarWarsCharacter {
-  name: String
-  height: String
-  mass: String
-  gender: Gender
+  id: ID!
+  name: String!
+  height: String!
+  mass: String!
+  hair_color: String
+  skin_color: String
+  eye_color: String
+  birth_year: String
+  gender: String
 }
 
-enum Gender {
-  MALE
-  FEMALE
+type Query {
+  StarWarsCharacter(id: ID!): StarWarsCharacter
+  allStarWarsCharacters: [StarWarsCharacter]
 }
 
+
+
+type StarWarsCharacter {
+  id: ID!
+  name: String!
+  height: String!
+  mass: String!
+  hair_color: String
+  skin_color: String
+  eye_color: String
+  birth_year: String
+  gender: String
+}
+
+type Query {
+  StarWarsCharacter(id: ID!): StarWarsCharacter
+  allStarWarsCharacters: [StarWarsCharacter]
+}

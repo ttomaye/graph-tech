@@ -4,7 +4,7 @@ import { GraphQLFieldResolver } from "graphql";
 type Args = { id: string };
 
 const Query: Record<string, GraphQLFieldResolver<{}, Context, any>> = {
-  swapiCharacterById: async (_, args: Args, ctx) => {
+  StarWarsCharacter: async (_, args: Args, ctx) => {
     return {};
   },
 };
